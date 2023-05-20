@@ -16,4 +16,7 @@ punctuationSign2 = chr(random.randint(33,47))
 
 password = uppercaseLetter1+uppercaseLetter2+lowercaseLetter1+lowercaseLetter2+digit1+digit2+punctuationSign1+punctuationSign2
 password = shuffle(password)
+#saves your password to a text file so you don't forget it
+with open("data.txt", "a") as data_file:
+            data_file.write(" "+str(passwrd) + "\n")
 print(password)
